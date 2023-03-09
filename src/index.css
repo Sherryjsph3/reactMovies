@@ -58,6 +58,7 @@ body {
 }
 .poster {
   width: 100%;
+  box-shadow: 6px 19px 35px rgb(0 0 0 / 20%);
 }
 h2 {
   text-align: center;
@@ -93,7 +94,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   color: #1f1d1b;
-  font-size: 12px;
+  font-size: 14px;
   padding: 6.4px 25.6px;
   font-weight: 300;
 }

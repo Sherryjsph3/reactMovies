@@ -8,9 +8,24 @@ const MovieDisplay = ({movie}) => {
     // function to return loaded JSX
       // the Component must return some JSX
   
-    const loaded = ()=>{  return (
+  const loaded = ()=>{  
+    
+    // let genres = movie.Genre;
+    // var newGenres = genres.replace(/[,]/g, ' -');
+    
+    if (movie.Response == "False") {
+      return <h3 className='msg'>{movie.Error}</h3>
+    }
+    if (movie.Response == "True") {
+      let genres = movie.Genre;
+      var newGenres = genres.replace(/[,]/g, ' -');
+   
+    }
+    
+
+    return (
     <>
-    {/* <div id='result'> */}
+
       <div className="info">
         <img src={movie.Poster} alt={movie.Title} className="poster"/>
         <div>
@@ -28,7 +43,7 @@ const MovieDisplay = ({movie}) => {
           </div>
 
           <div className="genre">
-            <div className='item'>{movie.Genre}</div>
+              <div className='item'>{newGenres}</div>
           </div>
 
        </div>
@@ -38,16 +53,17 @@ const MovieDisplay = ({movie}) => {
           <p>{movie.Plot}</p>
           <h3>Cast:</h3>
           <p>{movie.Actors}</p>
-    {/* </div> */}
+   
     </>
+    
     );
+   
   };
 
   // function to return loading JSX
-  // if the movie doesn't exist in the database
   const loading = () => {
     
-    return <h3 className='msg'>No Movie to Display</h3>;
+    return <h3 className='msg'>... Loading</h3>;
   };
 
   // ternary operator will determine which functions JSX we will return

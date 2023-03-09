@@ -20,14 +20,13 @@ function App() {
     const data = await response.json();
      // set the Movie state to the movie
      setMovie(data);
-    console.log(data);
-
-   
+     console.log(data);
+    
   }
  
 //when you want something to display on the screen before submitting anything..if you pass and empty array [] to useEffect, the useEffect will only run once - when the app is first loaded
   useEffect(() => {
-    getMovie("frozen");
+    getMovie("You've got mail");
   }, []);
 
   // USE OUR COMPONENTS IN APP's RETURNED JSX
