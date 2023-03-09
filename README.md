@@ -19,4 +19,4 @@ React Movie Guide outputs movie info after a search using the omdbapi.
 ![movie not found view](./imgs/not-found.png)
 
 ## Getting Started
-* [click here]() to see site!
+* [click here](https://movie-guidebook.netlify.app) to see site!
