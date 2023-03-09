@@ -2,6 +2,7 @@
 import{ useState, useEffect} from 'react';
 
 import './App.css';
+import './index.css'
 // WE IMPORT OUR COMPONENTS
 import MovieDisplay from './components/MovieDisplay';
 import Form from './components/Form';
@@ -20,6 +21,8 @@ function App() {
      // set the Movie state to the movie
      setMovie(data);
     console.log(data);
+
+   
   }
  
 //when you want something to display on the screen before submitting anything..if you pass and empty array [] to useEffect, the useEffect will only run once - when the app is first loaded
@@ -30,7 +33,7 @@ function App() {
   // USE OUR COMPONENTS IN APP's RETURNED JSX
   // we pass the getMovie function as a prop
   return (
-    <div className="App">
+    <div className="container">
       <Form getMovie={getMovie}/>
       <MovieDisplay movie={movie}/>
     </div>

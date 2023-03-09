@@ -26,14 +26,16 @@ const Form = (props) => {
     // the Component must return some JSX ..note: dont forget to close all tags />
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="search-container" onSubmit={handleSubmit}>
                 <input 
                 type="text" 
                 name="searchterm" 
+               id="movie-name"
                 onChange={handleChange} //on change is equiv of an event listener every time the value of input box changes it triggers onchange... linking text box w a piec of state
+                placeholder="Enter a movie name here..."
                 value={formState.searchterm}
                  /> 
-                <input type="submit" value="Submit"/>
+                <button id="search-btn" type="submit">Search</button>
             </form>
         </div>
     );
