@@ -15,7 +15,7 @@ function App() {
 // function to getMovies
   const getMovie = async(searchterm) => {
     // make fetch request and store response
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchterm}`)
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&t=${searchterm}`)
     // parse JSON response into a javascript object
     const data = await response.json();
      // set the Movie state to the movie
