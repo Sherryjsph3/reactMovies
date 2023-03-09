@@ -13,10 +13,10 @@ const MovieDisplay = ({movie}) => {
     // let genres = movie.Genre;
     // var newGenres = genres.replace(/[,]/g, ' -');
     
-    if (movie.Response == "False") {
+    if (movie.Response === "False") {
       return <h3 className='msg'>{movie.Error}</h3>
     }
-    if (movie.Response == "True") {
+    if (movie.Response === "True") {
       let genres = movie.Genre;
       var newGenres = genres.replace(/[,]/g, ' -');
    
